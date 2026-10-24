@@ -1,0 +1,35 @@
+.organization-page { max-width: 1080px; width: 100%; margin: 0 auto; padding: 36px 24px 48px; }
+.organization-page h1 { font-size: clamp(28px, 4vw, 42px); letter-spacing: -1px; overflow-wrap: anywhere; }
+.organization-topbar, .organization-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.organization-kicker { color: #9f2035; font-size: 13px; font-weight: 700; }
+.organization-intro, .organization-heading p { color: #667085; font-size: 14px; line-height: 1.7; }
+.organization-card { background: #fff; border: 1px solid #e4e7ec; border-radius: 14px; padding: 26px; margin-top: 24px; }
+.organization-card h2 { color: #26313f; font-size: 21px; overflow-wrap: anywhere; }
+.organization-type { display: inline-block; margin-bottom: 10px; color: #9f2035; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 20px; background: #fff0f2; }
+.organization-button, .organization-secondary { min-height: 42px; padding: 10px 16px; border: 1px solid #b4233b; border-radius: 8px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
+.organization-button { background: #b4233b; color: #fff; }
+.organization-secondary { background: #fff; color: #9f2035; }
+.organization-button:disabled, .organization-secondary:disabled { opacity: .65; cursor: wait; }
+.organization-button:focus-visible, .organization-secondary:focus-visible, .organization-field input:focus-visible { outline: 3px solid #b4233b; outline-offset: 3px; }
+.organization-location-form fieldset { border: 0; padding: 0; margin: 20px 0; display: grid; gap: 20px; grid-template-columns: 1fr 1fr; }
+.organization-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.organization-field label { font-size: 14px; font-weight: 700; }
+.organization-field input { width: 100%; min-height: 44px; padding: 11px 12px; border: 1px solid #cdd2da; border-radius: 8px; color: #26313f; background: #fff; font: inherit; }
+.organization-field input:disabled { background: #f7f8fa; }
+.organization-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.organization-error, .organization-notice { padding: 12px 14px; margin: 16px 0 0; border-radius: 8px; font-size: 14px; line-height: 1.6; }
+.organization-error { background: #fff0f2; color: #9f2035; }
+.organization-notice { background: #effaf3; color: #236345; }
+.organization-profile { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 22px 0 0; }
+.organization-profile div { min-width: 0; }
+.organization-profile dt { font-size: 12px; color: #667085; }
+.organization-profile dd { font-size: 15px; margin: 8px 0 0; overflow-wrap: anywhere; }
+.organization-note { color: #667085; margin: 24px 0 0; line-height: 1.7; font-size: 14px; }
+.organization-provider-location { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+@media (max-width: 620px) {
+  .organization-page { padding: 24px 16px 36px; }
+  .organization-card { padding: 20px; }
+  .organization-heading { flex-direction: column; gap: 12px; }
+  .organization-location-form fieldset, .organization-profile { grid-template-columns: 1fr; }
+  .organization-provider-location { padding: 0 16px; }
+}

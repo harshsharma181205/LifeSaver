@@ -1,0 +1,122 @@
+.donor-dashboard { min-height: calc(100vh - 88px); background: #f5f7fa; color: #243447; font-family: "Segoe UI", Arial, sans-serif; line-height: 1.6; }
+.donor-container { max-width: 1160px; padding: 28px 24px 34px; margin: 0 auto; }
+.donor-topbar, .donor-breadcrumb { display: flex; align-items: center; gap: 12px; }
+.donor-topbar { justify-content: space-between; margin-bottom: 24px; }
+.donor-breadcrumb { flex-wrap: wrap; color: #627184; font-size: 13px; }
+.donor-breadcrumb a { color: #627184; text-decoration: none; }
+.donor-breadcrumb [aria-current] { color: #243447; font-weight: 600; }
+.donor-logout { min-height: 44px; padding: 9px 16px; border: 1px solid #dfe5eb; border-radius: 9px; background: #fff; color: #4d5f72; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.donor-logout span { margin-left: 8px; }
+.donor-logout:hover { background: #fff5f6; color: #9f2035; }
+.donor-hero { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 36px 42px; border: 1px solid #eddee2; border-radius: 22px; background: linear-gradient(120deg, #fff4f5, #fff 78%); }
+.donor-hero-copy { min-width: 0; max-width: 660px; }
+.donor-kicker { margin: 0 0 10px; color: #9f2035; font-size: 11px; font-weight: 700; letter-spacing: .5px; }
+.donor-welcome-title { margin: 0 0 16px; font-size: clamp(30px, 4vw, 43px); color: #243447; line-height: 1.2; letter-spacing: -1.2px; overflow-wrap: anywhere; }
+.donor-welcome-title span { color: #a62239; }
+.donor-hero-description { max-width: 510px; margin: 0; color: #627184; font-size: 14px; line-height: 1.8; }
+.donor-hero-art { display: grid; place-items: center; flex-shrink: 0; width: 196px; height: 196px; padding: 30px; border: 1px solid #ead5dc; border-radius: 50%; background: #fff7f8; color: #b4233b; }
+.donor-hero-art svg { width: 48px; height: 58px; }
+.donor-hero-art p { margin: 14px 0 0; color: #805a64; font-size: 11px; text-align: center; }
+.donor-profile { margin-top: 24px; padding: 24px 28px; border: 1px solid #e3e8ee; border-radius: 16px; background: #fff; }
+.donor-profile-grid { display: grid; grid-template-columns: .7fr 1fr 1.2fr; gap: 24px; }
+.donor-profile-grid > div { min-width: 0; }
+.donor-profile-grid span, .donor-summary-row span { display: block; margin-bottom: 6px; color: #627184; font-size: 12px; }
+.donor-profile-value { display: block; font-size: 17px; font-weight: 650; overflow-wrap: anywhere; }
+.donor-blood-group { font-size: 24px; color: #a62239; }
+.donor-availability { font-size: 16px; color: #4d5f72; }
+.donor-available { color: #346b51; }
+.donor-availability-note { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid #edf0f3; color: #627184; font-size: 12px; }
+.donor-summary-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 22px 0; }
+.donor-summary-row > div { padding: 18px 24px; border: 1px solid #dfe9e7; border-radius: 14px; background: #edf5f3; }
+.donor-summary-row strong { color: #335a4c; font-size: 22px; }
+.donor-content-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.donor-card { min-width: 0; overflow: hidden; border: 1px solid #e3e8ee; border-radius: 16px; background: #fff; }
+.donor-card-heading { padding: 22px 24px; border-bottom: 1px solid #edf0f3; }
+.donor-card-heading .donor-kicker { margin-bottom: 6px; }
+.donor-dashboard h2 { margin: 0; font-size: 17px; line-height: 1.4; font-weight: 650; }
+.donor-card-heading > p:last-child { margin: 9px 0 0; color: #627184; font-size: 12px; }
+.donor-section-state { margin: 0; padding: 30px 24px; color: #627184; font-size: 13px; }
+.donor-profile .donor-section-state { padding: 16px 0 0; }
+.donor-section-error { padding: 24px; }
+.donor-profile .donor-section-error { padding: 14px 0 0; }
+.donor-section-error p { margin: 0 0 14px; color: #9f2035; font-size: 13px; }
+.donor-section-error button, .donor-mark-read { min-height: 44px; padding: 10px 14px; border: 1px solid #d7a6af; border-radius: 8px; background: #fff5f6; color: #9f2035; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.donor-mark-read:disabled { cursor: wait; opacity: .65; }
+.donor-empty { padding: 38px 24px; text-align: center; }
+.donor-empty > span { display: inline-grid; place-items: center; width: 60px; height: 60px; margin-bottom: 16px; border-radius: 18px; background: #f7f9fc; color: #627184; font-size: 28px; }
+.donor-empty h3 { margin: 0 0 8px; font-size: 15px; font-weight: 600; }
+.donor-empty p { max-width: 330px; margin: 0 auto; color: #627184; font-size: 12px; line-height: 1.8; }
+.donor-request-list, .donor-notification-list { list-style: none; margin: 0; padding: 0; }
+.donor-request-item { padding: 22px 24px; border-bottom: 1px solid #edf0f3; }
+.donor-request-item:last-child, .donor-notification-item:last-child { border-bottom: 0; }
+.donor-request-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.donor-request-heading h3 { margin: 0; font-size: 15px; font-weight: 650; }
+.donor-badge { padding: 4px 10px; border-radius: 20px; background: #f0f4f8; color: #4d5f72; font-size: 11px; font-weight: 600; }
+.donor-status-pending { background: #fff5df; color: #805910; }
+.donor-status-processing { background: #eaf1fc; color: #315a91; }
+.donor-status-fulfilled { background: #eaf5ef; color: #346b51; }
+.donor-request-item dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 16px 0 12px; }
+.donor-request-item dt { color: #627184; font-size: 11px; }
+.donor-request-item dd { margin: 4px 0 0; font-size: 14px; font-weight: 600; }
+.donor-emergency { color: #a62239; }
+.donor-request-date, .donor-notification-date { margin: 0; color: #627184; font-size: 11px; }
+.donor-notification-item { padding: 20px 24px; border-bottom: 1px solid #edf0f3; }
+.donor-notification-unread { background: #fffafb; border-left: 3px solid #b4233b; padding-left: 21px; }
+.donor-read-state { display: inline-block; color: #627184; font-size: 10px; font-weight: 700; letter-spacing: .4px; }
+.donor-notification-unread .donor-read-state { color: #a62239; }
+.donor-notification-message { margin: 8px 0 10px; font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+.donor-mark-read { margin-top: 14px; }
+.donor-read-error { margin: 10px 0 0; color: #9f2035; font-size: 12px; }
+.donor-footer { margin: 28px 0 0; color: #627184; font-size: 11px; text-align: center; }
+.donor-footer span { margin: 0 6px; }
+.donor-dashboard a:focus-visible, .donor-dashboard button:focus-visible, .donor-notification-item:focus-visible, .donor-request-item:focus-visible { outline: 3px solid #b4233b; outline-offset: 4px; border-radius: 6px; }
+@media (max-width: 760px) {
+  .donor-dashboard { min-height: calc(100vh - 76px); }
+  .donor-container { padding: 22px 20px 30px; }
+  .donor-hero { padding: 28px; }
+  .donor-hero-art { display: none; }
+  .donor-content-grid { grid-template-columns: minmax(0, 1fr); }
+  .donor-profile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .donor-profile-grid > div:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .donor-container { padding: 20px 16px 28px; }
+  .donor-hero { padding: 26px 22px; border-radius: 16px; }
+  .donor-welcome-title { font-size: 30px; letter-spacing: -1px; }
+  .donor-profile { padding: 22px; }
+  .donor-summary-row { gap: 12px; }
+  .donor-summary-row > div { padding: 16px; }
+  .donor-breadcrumb { gap: 8px; font-size: 11px; }
+  .donor-logout { padding: 8px 12px; font-size: 12px; }
+  .donor-card-heading, .donor-request-item { padding: 20px; }
+  .donor-request-item dl { gap: 8px; }
+}
+
+.donor-request-item dd { overflow-wrap: anywhere; }
+.donor-request-item dl > div { min-width: 0; }
+
+.donor-availability-controls, .donor-response-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.donor-availability-controls button, .donor-response-actions button, .donor-refresh { min-height: 44px; padding: 9px 14px; border: 1px solid #d7a6af; border-radius: 8px; background: #fff; color: #9f2035; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.donor-availability-controls button[aria-pressed="true"], .donor-accept { background: #a62239; color: #fff; }
+.donor-availability-controls button:disabled, .donor-response-actions button:disabled { cursor: wait; opacity: .65; }
+.donor-action-success, .donor-accepted { padding: 12px 16px; border: 1px solid #d4e7da; border-radius: 9px; background: #edf7f0; color: #346b51; font-size: 13px; overflow-wrap: anywhere; }
+.donor-action-error { color: #9f2035; font-size: 12px; overflow-wrap: anywhere; }
+.donor-bank-details { margin-top: 14px; padding: 12px 14px; border-radius: 9px; background: #f5f7fa; font-size: 12px; overflow-wrap: anywhere; }
+.donor-bank-details strong { display: block; color: #243447; }
+.donor-bank-details p { margin: 5px 0 0; color: #627184; }
+.donor-refresh { margin-top: 12px; }
+
+.donor-response-actions .donor-accept { background: #a62239; color: #fff; }
+
+.donor-location-form { border-top: 1px solid #e4e7ec; margin-top: 20px; padding-top: 18px; display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-end; }
+.donor-location-form h2, .donor-location-form > p { width: 100%; margin: 0; }
+.donor-location-form h2 { font-size: 17px; }
+.donor-location-form > p { color: #667085; font-size: 14px; }
+.donor-location-form > div { flex: 1 1 210px; }
+.donor-location-form label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+.donor-location-form input, .donor-location-form select { border: 1px solid #d0d5dd; background: white; border-radius: 8px; padding: 10px 12px; width: 100%; font: inherit; }
+.donor-location-form button { border: 0; border-radius: 8px; background: #ce2947; color: white; padding: 11px 16px; font: inherit; cursor: pointer; }
+.donor-location-form button:disabled { opacity: .55; }
+.donor-recipient-details { border-top: 1px solid #cbded3; padding-top: 12px; margin-top: 12px; color: #344054; }
+.donor-recipient-details h4 { margin: 0 0 8px; }
+.donor-recipient-details p { margin: 6px 0; overflow-wrap: anywhere; }

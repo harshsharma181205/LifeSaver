@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const authenticate = require('../middleware/authMiddleware');
+const { registerDonor, getMatchingRequests, updateAvailability, respondToRequest, updateLocation } = require('../controllers/donorController');
+const { requestHandler, donorResponse } = require('../controllers/workflowV2Controller');
+router.post('/', registerDonor);
+router.get('/me/matching-requests', authenticate, requestHandler('donorMatches'), getMatchingRequests);
+router.patch('/me/availability', authenticate, updateAvailability);
+router.put('/me/location', authenticate, updateLocation);
+router.post('/me/requests/:request_id/response', authenticate, donorResponse, respondToRequest);
+module.exports = router;

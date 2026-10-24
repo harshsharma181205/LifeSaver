@@ -1,0 +1,19 @@
+.app { display: flex; flex-direction: column; }
+.lifesaver-footer { margin-top: auto; border-top: 1px solid #e7e9ef; background: #fff; padding: 32px 24px 20px; }
+.lifesaver-footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr)); gap: 48px; }
+.lifesaver-footer-brand a { color: #9f2035; font-weight: 800; font-size: 21px; text-decoration: none; }
+.lifesaver-footer-brand p { max-width: 410px; margin: 12px 0 0; color: #667085; font-size: 13px; line-height: 1.7; }
+.lifesaver-footer-brand .lifesaver-footer-subtitle { margin-top: 8px; color: #344054; font-weight: 600; }
+.lifesaver-footer-links h2 { margin: 0 0 14px; color: #344054; font-size: 14px; line-height: 1.5; }
+.lifesaver-footer-links ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.lifesaver-footer-links a { color: #667085; font-size: 13px; line-height: 1.6; text-decoration: none; }
+.lifesaver-footer-links a:hover { color: #9f2035; text-decoration: underline; text-underline-offset: 3px; }
+.lifesaver-footer-bottom { max-width: 1160px; margin: 28px auto 0; padding-top: 18px; border-top: 1px solid #edf0f3; color: #667085; font-size: 12px; line-height: 1.6; }
+.lifesaver-footer a:focus-visible { outline: 3px solid #b4233b; outline-offset: 5px; }
+@media (max-width: 720px) {
+  .lifesaver-footer-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+  .lifesaver-footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 360px) {
+  .lifesaver-footer-inner { column-gap: 20px; }
+}

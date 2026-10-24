@@ -1,0 +1,12 @@
+.request-fulfillment { margin: 20px 0; padding: 18px; border: 1px solid #e4e7ec; background: #f8fafc; border-radius: 12px; color: #344054; }
+.fulfillment-heading { display: flex; gap: 12px; justify-content: space-between; flex-wrap: wrap; font-size: 14px; }
+.request-fulfillment progress { display: block; width: 100%; height: 10px; margin: 15px 0 10px; accent-color: #d92d4a; }
+.fulfillment-sources { margin: 8px 0 0; font-size: 13px; color: #667085; }
+.accepted-donor-list { margin-top: 18px; border-top: 1px solid #e4e7ec; padding-top: 14px; }
+.accepted-donor-list h3 { font-size: 16px; margin: 0; }
+.accepted-donor-list p { font-size: 14px; line-height: 1.6; }
+.accepted-donor { padding: 14px 0; overflow-wrap: anywhere; }
+.accepted-donor + .accepted-donor { border-top: 1px solid #e4e7ec; }
+.accepted-donor p { margin: 6px 0; }
+.request-cancel { margin-top: 15px; background: white; color: #b42335; border: 1px solid #e4aab2; border-radius: 8px; padding: 10px 14px; font: inherit; cursor: pointer; }
+.request-cancel:disabled { opacity: .55; cursor: wait; }

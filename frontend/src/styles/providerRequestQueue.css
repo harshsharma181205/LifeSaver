@@ -1,0 +1,31 @@
+.provider-queue-scope, .provider-queue-footnote { color: #67758a; font-size: 12px; line-height: 1.7; }
+.provider-queue-controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+.provider-queue-active { background: #f5f8ff; border: 2px solid #c6d4ee; border-radius: 12px; padding: 20px; margin: 18px 0; }
+.provider-queue-list { display: grid; gap: 14px; padding: 0; margin: 16px 0; list-style: none; }
+.provider-queue-list > li { display: flex; align-items: flex-start; gap: 14px; border: 1px solid #e1e7ef; border-radius: 12px; padding: 18px; }
+.provider-queue-position { display: grid; place-items: center; flex: 0 0 30px; height: 30px; border-radius: 50%; background: #fbeef0; color: #aa293b; font-size: 13px; font-weight: 700; }
+.provider-queue-row { min-width: 0; flex: 1; }
+.provider-queue-row-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.provider-queue-row-heading strong { font-size: 15px; }
+.provider-queue-fields { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 16px 0; }
+.provider-queue-fields div { min-width: 0; }
+.provider-queue-fields dt { font-size: 11px; color: #718096; margin-bottom: 6px; }
+.provider-queue-fields dd { margin: 0; color: #31415a; font-size: 13px; overflow-wrap: anywhere; }
+.provider-queue-reason, .provider-queue-summary { font-size: 13px; line-height: 1.65; color: #53647d; }
+.provider-queue-reason { margin: 12px 0; }
+.provider-queue-alert, .provider-queue-emergency, .provider-queue-notice { border-radius: 9px; padding: 13px 16px; font-size: 13px; line-height: 1.7; }
+.provider-queue-alert { background: #fff8e9; color: #825c24; border: 1px solid #f0dfb9; }
+.provider-queue-emergency { background: #fff0f2; color: #9c2e40; border: 1px solid #efd1d7; }
+.provider-queue-notice { background: #eef8f3; color: #2e7054; }
+.provider-queue-warning { color: #835e2f; font-size: 12px; line-height: 1.7; }
+.provider-queue p, .provider-queue strong { overflow-wrap: anywhere; }
+.provider-queue button { max-width: 100%; }
+@media (max-width: 700px) {
+  .provider-queue-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .provider-queue-list > li { gap: 9px; padding: 14px 12px; }
+  .provider-queue-active { padding: 16px; }
+}
+@media (max-width: 420px) {
+  .provider-queue-controls { display: grid; grid-template-columns: 1fr; }
+  .provider-queue-position { flex-basis: 24px; height: 24px; }
+}

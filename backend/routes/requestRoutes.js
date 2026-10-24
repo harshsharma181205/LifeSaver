@@ -1,0 +1,13 @@
+const router = require('express').Router();
+const authenticate = require('../middleware/authMiddleware');
+const { createRequest, getRequests, getRequestById, cancelRequest } = require('../controllers/requestController');
+const { getProviderQueue } = require('../controllers/schedulingController');
+const { getWorkflowConfig, requestHandler } = require('../controllers/workflowV2Controller');
+router.get('/workflow-config', getWorkflowConfig);
+router.use(authenticate);
+router.post('/', requestHandler('create'), createRequest);
+router.get('/', requestHandler('list'), getRequests);
+router.get('/provider-queue', requestHandler('queue'), getProviderQueue);
+router.get('/:requestId', requestHandler('detail'), getRequestById);
+router.patch('/:requestId/cancel', requestHandler('cancel'), cancelRequest);
+module.exports = router;

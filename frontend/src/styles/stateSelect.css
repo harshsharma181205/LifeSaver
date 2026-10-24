@@ -1,0 +1,8 @@
+.state-select { display: grid; gap: 8px; min-width: 0; }
+.state-select input, .state-select select {
+  width: 100%; min-width: 0; min-height: 44px; padding: 11px 12px; border: 1px solid #cdd2da;
+  border-radius: 8px; background: #fff; color: #26313f; font: inherit; font-size: 15px;
+}
+.state-select input:focus-visible, .state-select select:focus-visible { outline: 3px solid #b4233b; outline-offset: 2px; }
+.state-select input:disabled, .state-select select:disabled { background: #f7f8fa; color: #667085; }
+.state-select small { color: #667085; font-size: 12px; }
