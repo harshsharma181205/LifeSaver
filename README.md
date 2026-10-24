@@ -1,4 +1,4 @@
-# LifeSaver — Blood Donation Management System
+# LifeSaver — Smart Blood Donation & Allocation Platform
 
 LifeSaver is a full-stack web application designed to connect blood donors, recipients, hospitals, and Blood Banks through a coordinated blood-request and donation workflow. It helps recipients request blood, enables eligible Blood Banks to manage and allocate available units, and provides a way to contact compatible donors when the available inventory cannot cover the requirement.
 
@@ -6,19 +6,19 @@ The application uses a **React** frontend, a **Node.js/Express** backend, and a 
 
 ## Table of Contents
 
-- [Features and Modules](#features-and-modules)
-- [How LifeSaver Works](#how-lifesaver-works)
-- [Request Prioritization](#request-prioritization)
-- [Technology Stack](#technology-stack)
-- [Project Structure](#project-structure)
-- [Requirements](#requirements)
-- [Setup and Run Locally](#setup-and-run-locally)
-- [Authentication API](#authentication-api)
-- [How Authentication Works](#how-authentication-works)
-- [Testing](#testing)
-- [Security Notes](#security-notes)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
+- Features and Modules
+- How LifeSaver Works
+- Request Prioritization
+- Technology Stack
+- Project Structure
+- Requirements
+- Setup and Run Locally
+- Authentication API
+- How Authentication Works
+- Testing
+- Security Notes
+- Troubleshooting
+- Contributing
 
 ## Features and Modules
 
@@ -99,7 +99,7 @@ Information and actions are filtered according to the signed-in user's role and 
 
 The following is the overall workflow for a blood requirement:
 
-```text
+```
 Recipient creates a blood request
                |
                v
@@ -148,19 +148,19 @@ Request prioritization works alongside inventory availability, eligibility, and 
 
 ## Technology Stack
 
-| Layer | Technologies |
-| --- | --- |
-| Frontend | React, JavaScript, CSS, Vite |
-| Client-side routing | React Router |
-| API communication | HTTP/JSON, Axios where used |
-| Backend | Node.js, Express.js |
-| Database | MySQL |
-| Authentication | JWT and password verification |
-| Testing | Backend unit/integration tests, frontend tests, browser-based checks |
+| Layer               | Technologies                                                         |
+| ------------------- | -------------------------------------------------------------------- |
+| Frontend            | React, JavaScript, CSS, Vite                                         |
+| Client-side routing | React Router                                                         |
+| API communication   | HTTP/JSON, Axios where used                                          |
+| Backend             | Node.js, Express.js                                                  |
+| Database            | MySQL                                                                |
+| Authentication      | JWT and password verification                                        |
+| Testing             | Backend unit/integration tests, frontend tests, browser-based checks |
 
 ## Project Structure
 
-```text
+```
 LifeSaver/
 ├── backend/
 │   ├── controllers/      # Request handlers and controller logic
@@ -200,9 +200,9 @@ Ensure both the frontend and backend dependencies are installed and that MySQL i
 
 Open your existing LifeSaver project directory, or clone the repository:
 
-```bash
-git clone https://github.com/harshsharma181205/LifeSaver-Blood-Management-System.git
-cd LifeSaver-Blood-Management-System
+```
+git clone https://github.com/harshsharma181205/LifeSaver.git
+cd LifeSaver
 ```
 
 If you already have a configured installation, **use the existing project and database** rather than recreating them.
@@ -218,7 +218,7 @@ The existing local application uses a MySQL database named `blood_management`. D
 
 Example workflow-related environment settings:
 
-```dotenv
+```
 JWT_EXPIRES_IN=1h
 LIFESAVER_WORKFLOW_V2=true
 ```
@@ -229,7 +229,7 @@ LIFESAVER_WORKFLOW_V2=true
 
 In one terminal, from the project directory:
 
-```bash
+```
 cd backend
 npm install
 node index.js
@@ -241,13 +241,13 @@ Alternatively, use a startup script declared in `backend/package.json` if one is
 
 In another terminal, from the project directory:
 
-```bash
+```
 cd frontend
 npm install
 npm run dev
 ```
 
-Open the URL shown by Vite, typically **http://localhost:5173**.
+Open the URL shown by Vite, typically [**http://localhost:5173**](http://localhost:5173).
 
 ### 5. Verify connectivity
 
@@ -262,22 +262,22 @@ If the computer is restarted, the servers may need to be started again unless au
 
 LifeSaver includes role-specific authentication routes. The following endpoints are based on the authentication router being mounted at `/api/auth`:
 
-| Method | Endpoint | Purpose |
-| --- | --- | --- |
-| `POST` | `/api/auth/donor/login` | Sign in as a donor |
-| `POST` | `/api/auth/recipient/login` | Sign in as a recipient |
-| `POST` | `/api/auth/organization/login` | Sign in as an organization |
-| `POST` | `/api/auth/blood-bank/login` | Sign in as a Blood Bank |
-| `GET` | `/api/auth/me` | Get the authenticated user's profile |
+| Method | Endpoint                       | Purpose                              |
+| ------ | ------------------------------ | ------------------------------------ |
+| `POST` | `/api/auth/donor/login`        | Sign in as a donor                   |
+| `POST` | `/api/auth/recipient/login`    | Sign in as a recipient               |
+| `POST` | `/api/auth/organization/login` | Sign in as an organization           |
+| `POST` | `/api/auth/blood-bank/login`   | Sign in as a Blood Bank              |
+| `GET`  | `/api/auth/me`                 | Get the authenticated user's profile |
 
 ### Login request example
 
-```http
+```
 POST http://localhost:5000/api/auth/donor/login
 Content-Type: application/json
 ```
 
-```json
+```
 {
   "phone": "YOUR_REGISTERED_PHONE",
   "password": "YOUR_PASSWORD"
@@ -288,7 +288,7 @@ Use the recipient login endpoint for a recipient account. Actual accepted identi
 
 Successful login returns authentication information, including a JWT token and safe account details. Protected routes require the token in the format expected by the authentication middleware, commonly:
 
-```http
+```
 Authorization: Bearer YOUR_JWT_TOKEN
 ```
 
@@ -329,17 +329,17 @@ Do not run tests that create, modify, or delete records against a populated prod
 
 ## Troubleshooting
 
-| Problem | What to check |
-| --- | --- |
-| Frontend does not open | Confirm Vite is running and use the URL printed in its terminal. |
-| API/network error | Confirm the backend process is running and frontend API settings point to the right port. |
-| Database connection failed | Verify MySQL service status and the backend database configuration. |
-| `401 Unauthorized` | Check account credentials and whether the JWT is expired or missing. |
-| `403 Forbidden` / unavailable action | Check the account role, designated Blood Bank, and whether the request is open. |
-| Screening action not visible | Confirm the donor is accepted, the request is open, and the signed-in Bank is the designated collecting Bank. |
-| No donor notification | Check request status, blood-group compatibility, eligible Bank inventory, matching conditions, and notification state. |
-| Unexpected fulfillment count | Distinguish inventory allocation, donor acceptance, screening, and actual confirmed donation. |
-| CORS or browser request failure | Inspect backend configuration, browser Network tab, and backend logs. |
+| Problem                              | What to check                                                                                                          |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| Frontend does not open               | Confirm Vite is running and use the URL printed in its terminal.                                                       |
+| API/network error                    | Confirm the backend process is running and frontend API settings point to the right port.                              |
+| Database connection failed           | Verify MySQL service status and the backend database configuration.                                                    |
+| `401 Unauthorized`                   | Check account credentials and whether the JWT is expired or missing.                                                   |
+| `403 Forbidden` / unavailable action | Check the account role, designated Blood Bank, and whether the request is open.                                        |
+| Screening action not visible         | Confirm the donor is accepted, the request is open, and the signed-in Bank is the designated collecting Bank.          |
+| No donor notification                | Check request status, blood-group compatibility, eligible Bank inventory, matching conditions, and notification state. |
+| Unexpected fulfillment count         | Distinguish inventory allocation, donor acceptance, screening, and actual confirmed donation.                          |
+| CORS or browser request failure      | Inspect backend configuration, browser Network tab, and backend logs.                                                  |
 
 ## Contributing
 
@@ -353,5 +353,5 @@ Contributions should be focused and tested:
 
 ---
 
-**Project:** LifeSaver — Blood Donation Management System  
-**Repository:** [harshsharma181205/LifeSaver-Blood-Management-System](https://github.com/harshsharma181205/LifeSaver-Blood-Management-System)
+**Project:** LifeSaver — Smart Blood Donation & Allocation Platform\
+**Repository:** [harshsharma181205/LifeSaver](https://github.com/harshsharma181205/LifeSaver)
